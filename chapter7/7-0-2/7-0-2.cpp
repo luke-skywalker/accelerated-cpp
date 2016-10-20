@@ -29,6 +29,7 @@
 */
 
 #include <cstdlib>
+#include <ctime>     // providing a seed for the prand number generator
 #include <iostream>
 #include <istream>
 #include <iterator>
@@ -120,6 +121,9 @@ Grammar read_grammar(std::istream& in)
 
 int main()
 {
+  // seed the pseudo-random number generator
+  std::srand(std::time(0));
+
   // generate the sentence
   std::vector<std::string> sentence = gen_sentence(read_grammar(std::cin));
 
