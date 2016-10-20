@@ -1,7 +1,30 @@
 /*
-  a Grammar is a description specifying how to create sentences
+  a Grammar is a description specifying how to create sentences;
+            it is a map mapping a string to a Rule collection
 
-  For example, "the <noun-phrase> <verb> <location>" is a grammar.
+	    <noun>        [ [ "cat" ],
+	                    [ "dog" ],
+			    [ "johnny" ],
+			    [ "jb", "hankamanka", "junior" ] ]
+
+	    <verb>        [ [jumps],
+	                    [laughs],
+			    [prays] ]
+
+	    <location>    [ [ "on", "the", "table" ] ]
+
+	    <sentence>    [ [the <noun> <verb> <location>],
+	                    [the <noun> <verb>] ]
+            __________    _______________________________________________________
+	     ^             ^
+	     string        Rule collection
+
+  a Rule collection is a vector of Rules
+
+  a Rule is a vector of strings;
+         it can have only one string, like [ "cat" ]
+	 or more than one string, like [ "on", "the", "table" ]
+	                            or [ "jb", "hankamanka", "junior" ]
 
 */
 
