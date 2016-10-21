@@ -14,7 +14,7 @@ bool not_url_char(char c)
   // OBS. it took me a while to understand this line
   // find(url_ch.begin(), url_ch.end(), c) != url_ch.end()
   //
-  // The thing is that the find function returns a pointer to pointing
+  // The thing is that the find function returns a pointer pointing
   // to its second argument in case it does not find what specified in
   // the third argument. With this in mind, if find returns
   // url_ch.end() it means that it didn't find any c
